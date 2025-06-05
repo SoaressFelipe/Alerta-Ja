@@ -152,6 +152,8 @@ document.getElementById("verResultado").addEventListener("click", function () {
     }
   });
 
+  console.log("Usuário acertou:", acertos);
+
   const resultado = document.getElementById("resultadoQuiz");
   resultado.textContent = "Você acertou " + acertos + " de " + perguntas.length;
 });
