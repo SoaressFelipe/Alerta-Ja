@@ -60,6 +60,8 @@ function mostrarSlides() {
 mostrarSlides();
 
 // Quiz
+
+//Perguntas e respostas do quiz
 const perguntas = [
   {
     pergunta: "O que fazer em caso de enchente?",
@@ -113,6 +115,7 @@ const perguntas = [
   }
 ];
 
+//Mostra as perguntas e opções na tela
 function carregarQuiz() {
   const areaPerguntas = document.getElementById("perguntas");
 
@@ -138,6 +141,7 @@ function carregarQuiz() {
   });
 }
 
+//Verifica as respostas selecionadas
 document.getElementById("verResultado").addEventListener("click", function () {
   let acertos = 0;
 
