@@ -37,7 +37,7 @@ document.getElementById("cepForm").addEventListener("submit", function (e) {
     mensagem.textContent = `⚠️ ALERTA! Nível da água: ${nivel.toFixed(2)}m`;
     mensagem.style.color = "red";
   } else {
-    mensagem.textContent = `✅ Seguro. Nível da água: ${nivel.toFixed(2)}m`;
+    mensagem.textContent = `✅ Área segura. Nível da água: ${nivel.toFixed(2)}m`;
     mensagem.style.color = "green";
   }
 });
@@ -151,5 +151,4 @@ document.getElementById("verResultado").addEventListener("click", function () {
   const resultado = document.getElementById("resultadoQuiz");
   resultado.textContent = "Você acertou " + acertos + " de " + perguntas.length;
 });
-
 carregarQuiz();
