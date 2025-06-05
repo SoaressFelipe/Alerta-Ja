@@ -25,6 +25,7 @@ document.getElementById("cepForm").addEventListener("submit", function (e) {
 
   const cep = document.getElementById("cepInput").value;
   const mensagem = document.getElementById("mensagem");
+  console.log("CEP digitado:", cep)
 
   if (cep.length !== 8 || isNaN(cep)) {
     alert("Digite um CEP válido com 8 números.");
@@ -32,6 +33,7 @@ document.getElementById("cepForm").addEventListener("submit", function (e) {
   }
 
   const nivel = Math.random() * 3;
+  console.log("Nível de água gerado:", nivel.toFixed(2));
 
   if (nivel >= 2) {
     mensagem.textContent = `⚠️ ALERTA! Nível da água: ${nivel.toFixed(2)}m`;
@@ -156,6 +158,7 @@ document.getElementById("verResultado").addEventListener("click", function () {
 
   const resultado = document.getElementById("resultadoQuiz");
   resultado.textContent = "Você acertou " + acertos + " de " + perguntas.length;
-  alert("Você acertou" + acertos + "de" + perguntas.length + "pergunta!")
+  console.log("Usuário acertou", acertos, "de", perguntas.length, "perguntas.");
+  alert("Você acertou " + acertos + " de " + perguntas.length + " perguntas!")
 });
 carregarQuiz();
