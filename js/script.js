@@ -41,3 +41,20 @@ document.getElementById("cepForm").addEventListener("submit", function (e) {
     mensagem.style.color = "green";
   }
 });
+
+// Slideshow
+
+let slideIndex = 0;
+let slides = document.querySelectorAll(".slide");
+
+function mostrarSlides() {
+  slides.forEach(function (slide) {
+    slide.style.display = "none";
+  });
+  slideIndex++;
+  if (slideIndex > slides.length) slideIndex = 1;
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(mostrarSlides, 3000);
+}
+
+mostrarSlides();
