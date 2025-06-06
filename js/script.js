@@ -162,3 +162,13 @@ document.getElementById("verResultado").addEventListener("click", function () {
   alert("Você acertou " + acertos + " de " + perguntas.length + " perguntas!")
 });
 carregarQuiz();
+
+document.getElementById("reiniciarQuiz").addEventListener("click", function () {
+  perguntas.forEach(function (questao, i) {
+    const selecionado = document.querySelector(`input[name="p${i}"]:checked`);
+    if (selecionado) {
+      selecionado.checked = false;
+    }
+  });
+  document.getElementById("resultadoQuiz").textContent = "";
+});
